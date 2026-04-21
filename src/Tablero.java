@@ -56,7 +56,16 @@ public class Tablero {
         Casilla casillaNueva = new Casilla(nave);
         this.tablero[x][y] = casillaNueva;
     }
-
+    public int comprobar_impacto(int x, int y){
+        int resultado = this.tablero[x][y].recibirDisparo();
+        if(resultado == 1){
+            return TOCADO;
+        }else if(resultado == 2){
+            return HUNDIDO;
+        }else{
+            return AGUA;
+        }
+    }
 
 
 }
