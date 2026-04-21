@@ -50,6 +50,11 @@ public class Tablero {
         this.tablero[2][6]=casilla22;
         this.tablero[2][7]=casilla23;
         this.tablero[2][8]=casilla24;
+
+    }
+    public void colocar_nave(Nave nave, int x, int y){
+        Casilla casillaNueva = new Casilla(nave);
+        this.tablero[x][y] = casillaNueva;
     }
 
 
