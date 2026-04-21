@@ -10,15 +10,18 @@ public class Casilla {
     Métodos:
     -comprobar_contenido() -> Comprueba si hay agua o Nave y devuelve true o false
     -__init__ -> inizializador
-    -setter y getter -> para Casilla.__contenido (@property y @contenido.setter)
     -recibirDisparo -> encargado de lanzar disparo a Nave
      */
      //por defecto agua
-    Boolean estado = false; //no se ha visitado
+    public Boolean estado = false; //no se ha visitado
+    public Nave contenido;
     public Casilla(Nave nave) {
-        Nave contenido = nave;
+        this.contenido = nave;
     }
     public Casilla(String agua){
-        String contenido = "agua";
+        this.contenido = null;
     }
+
+
+
 }
