@@ -29,5 +29,32 @@ public class Casilla {
             return true;
         }
     }
+    public int recibirDisparo(){
+        /*
+        recibirDisparo devuelve:
+        0 en caso de agua
+        1 en caso de nave
+        -1 en caso de que el usuario haya atacado dos o más veces a la misma casilla y
+        2  si está hundido
+         */
+
+        if(this.estado == false){//si no se le ha disparado antes
+            this.estado = true;
+            if(comprobar_contenido() == true){//si contiene una nave
+                this.contenido.recibir_disparo(); //se lanza un disparo
+                if(this.contenido.tamanho <= 0){ //si no tiene vidas
+                    return 2;
+                }else{ //tiene vidas
+                    return 1;
+                }
+
+            }else { //agua
+                return 0;
+
+            }
+            }else{
+            return -1;
+        }
+    }
 
 }
