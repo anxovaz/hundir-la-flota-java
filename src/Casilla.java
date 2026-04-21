@@ -22,6 +22,12 @@ public class Casilla {
         this.contenido = null;
     }
 
-
+    public boolean comprobar_contenido(){ //comprueba si es agua o nave
+        if(this.contenido == null){
+            return false;
+        }else{
+            return true;
+        }
+    }
 
 }
