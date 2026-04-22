@@ -3,10 +3,7 @@ class Juego{
 
     public Juego(){
     }
-
-    public String lanzar_ataque(int x, int y){
-        System.out.println("Atacando a " + x + "," + y);
-        int resultado = this.tablero.comprobar_impacto(x,y);
+    public String mostrar_resultado(int resultado) {
         if (resultado == 0) {
             return "Agua";
         } else if (resultado == 1) {
