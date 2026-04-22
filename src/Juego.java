@@ -13,12 +13,6 @@ class Juego{
         }
     }
 
-    public void lanzar_ataque(int x, int y){
-        System.out.println("Atacando a " + x + "," + y);
-        int resultado = this.tablero.comprobar_impacto(x,y);
-        this.mostrar_resultado(resultado);
-    }
-
 
 
 }
