@@ -1,9 +1,15 @@
+/**
+ * Clase Tablero
+ * Constructor -> crea un array con casillas
+ * colocar_nave -> métod0 para meter una nave en una casilla del array
+ * comprobar_impacto -> manda una señal a la clase casilla, que se encarga de comprobar si hay una nave, devuelve una constante en función de la respuesta
+ */
 public class Tablero {
     public static final int AGUA = 0;
     public static final int TOCADO = 1;
     public static final int HUNDIDO = 2;
 
-    public Casilla[][] tablero;
+    public Casilla[][] tablero; //array de casillas
     public Tablero() {
 
          //inicializacion de las naves
@@ -42,6 +48,8 @@ public class Tablero {
                 {new Casilla("agua"), new Casilla("agua"), new Casilla("agua"), new Casilla("agua"), new Casilla("agua"), new Casilla("agua"), new Casilla("agua"), new Casilla("agua"), new Casilla("agua"), new Casilla("agua")},
                 {new Casilla("agua"), new Casilla("agua"), new Casilla("agua"), new Casilla("agua"), new Casilla("agua"), new Casilla("agua"), new Casilla("agua"), new Casilla("agua"), new Casilla("agua"), new Casilla("agua")}
         };
+
+        //mete las casillas que tienen nave en el tablero
         this.tablero[0][0]=casilla01;
         this.tablero[6][1]=casilla11;
         this.tablero[6][2]=casilla12;
@@ -53,10 +61,12 @@ public class Tablero {
 
     }
     public void colocar_nave(Nave nave, int x, int y){
+        //mét0do para colocar nave en una posición
         Casilla casillaNueva = new Casilla(nave);
         this.tablero[x][y] = casillaNueva;
     }
     public int comprobar_impacto(int x, int y){
+        //mét0do para comprobar un impactp
         int resultado = this.tablero[x][y].recibirDisparo();
         if(resultado == 1){
             return TOCADO;
