@@ -1,6 +1,13 @@
+/**
+ * Clase Para lanzar el juego
+ *
+ * @author Anxo Vázquez Lorenzo
+ * @version 1.0
+ */
 public class Main {
-    /*
-    *Clase para ejecutar el juego
+    /**
+     * Mét0do main para lanzar el juego
+     * @param args
      */
     public static void main(String[] args){
         Tablero tablero = new Tablero(); //instancia tablero 10x10
